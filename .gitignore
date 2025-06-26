@@ -1,0 +1,30 @@
+# Node modules (never push this folder)
+node_modules/
+
+# Environment variable files
+.env
+
+# Log files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDEs / Editors
+.vscode/
+.idea/
+
+# Dependency lock files (optional if you're not using them for exact versioning)
+package-lock.json
+
+# Build files (if any)
+dist/
+build/
+
+# System folders
+*.swp
