@@ -18,7 +18,7 @@ const express = require ('express'); //this is used to make servers easily
     app.set("views",path.resolve("./views"));//this tells that all my views files are in the ./views folder
 
     //connection to DB
-    connecttomongodb("mongodb://localhost:27017/short-url")//short-url is the db name this whole string can be found through terminal/mongosh
+    connecttomongodb(process.env.MONGODB_URI)//short-url is the db name this whole string can be found through terminal/mongosh
     .then(()=>{
         console.log("mongodb connected");
     })//this then catch is function same as if else
