@@ -1,4 +1,5 @@
 const express = require ('express'); //this is used to make servers easily 
+require('dotenv').config();
    
 
     const path = require("path");
