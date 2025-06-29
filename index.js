@@ -1,5 +1,8 @@
 const express = require ('express'); //this is used to make servers easily 
-require('dotenv').config();
+require('dotenv').config(); // this automatically looks for .env
+
+
+
    
 
     const path = require("path");
@@ -19,9 +22,11 @@ require('dotenv').config();
     app.set("views",path.resolve("./views"));//this tells that all my views files are in the ./views folder
 
     //connection to DB
-    connecttomongodb(process.env.MONGODB_URI)//short-url is the db name this whole string can be found through terminal/mongosh
+    connecttomongodb()//short-url is the db name this whole string can be found through terminal/mongosh
     .then(()=>{
         console.log("mongodb connected");
+    }).catch((err)=>{
+        console.log("err",err);
     })//this then catch is function same as if else
 
 
